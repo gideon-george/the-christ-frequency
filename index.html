@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Christ Frequency: Free 7-Day Starter Guide</title>
+<meta name="description" content="A free 7-day guide to quieting the noise, loosening the grip of fear, and coming alive to the Christ within. From the book The Christ Frequency by Gideon George.">
+
+<!-- Social share preview - replace with your live URLs after deploying -->
+<meta property="og:title" content="The Christ Frequency: Free 7-Day Starter Guide">
+<meta property="og:description" content="What if Christ is not only someone to believe in, but a way of being to awaken within? Begin with the free 7-day guide.">
+<meta property="og:image" content="tcf-cover.jpg">
+<meta property="og:type" content="website">
+
+<!-- ==========================================================
+     TRACKING PLACEHOLDERS
+     Uncomment a block and drop in your ID to switch it on.
+     ==========================================================
+
+     GOOGLE ANALYTICS 4
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'G-XXXXXXXXXX');
+     </script>
+
+     META (FACEBOOK) PIXEL
+     <script>
+       !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+       n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+       n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+       t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+       document,'script','https://connect.facebook.net/en_US/fbevents.js');
+       fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView');
+     </script>
+
+     A "Lead" conversion event already fires automatically on successful
+     signup - see trackSignup() near the bottom of this file.
+     ========================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================
+   1. DESIGN TOKENS - every colour lives here, change once
+   ========================================================== */
+:root{
+  --ink:         #080D1B;  /* deepest midnight ground         */
+  --ink-2:       #0E1528;  /* raised dark panel               */
+  --cream:       #FBF7F0;  /* luminous light section          */
+  --cream-2:     #F3EADA;  /* light section lower edge        */
+  --gold:        #E4B25C;  /* primary accent + buttons        */
+  --gold-lit:    #F7DCA6;  /* highlight / glow                */
+  --gold-deep:   #8A6417;  /* gold text on light backgrounds  */
+  --on-dark:     #EDF0F7;
+  --on-dark-mut: #A6B0C6;
+  --on-light:    #14192A;
+  --on-light-mut:#4E5769;
+
+  --serif: Fraunces, Georgia, "Times New Roman", serif;
+  --sans:  Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --wrap: 1080px;
+  --shadow-gold: 0 12px 40px rgba(228,178,92,.28);
+}
+
+/* ==========================================================
+   2. BASE
+   ========================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--on-dark);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.14;letter-spacing:-.015em;margin:0 0 .5em}
+h1{font-size:clamp(2.05rem,7.2vw,3.5rem)}
+h2{font-size:clamp(1.6rem,5.2vw,2.5rem)}
+h3{font-size:clamp(1.15rem,3.4vw,1.4rem)}
+p{margin:0 0 1.1em}
+a{color:var(--gold);text-underline-offset:3px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 22px}
+.narrow{max-width:720px;margin-left:auto;margin-right:auto}
+section{padding:clamp(56px,10vw,104px) 0}
+.center{text-align:center}
+.eyebrow{font-size:.74rem;letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:var(--gold);margin:0 0 1.1em}
+.lede{font-size:clamp(1.05rem,2.9vw,1.22rem);color:var(--on-dark-mut);max-width:46ch}
+.center .lede{margin-left:auto;margin-right:auto}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ==========================================================
+   3. THE ONE ACTION - email form + button (repeated 4x)
+   ========================================================== */
+.tcf-form{display:flex;flex-direction:column;gap:11px;max-width:460px;width:100%}
+.center .tcf-form{margin-left:auto;margin-right:auto}
+.tcf-form input[type=email]{
+  width:100%;padding:16px 18px;font-size:16px;font-family:var(--sans);
+  border-radius:12px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);color:var(--on-dark);
+}
+.tcf-form input[type=email]::placeholder{color:#8894AC}
+.tcf-form input[type=email]:focus-visible{outline:2px solid var(--gold);outline-offset:1px;background:rgba(255,255,255,.1)}
+.btn{
+  display:block;width:100%;cursor:pointer;border:0;
+  padding:17px 22px;border-radius:12px;
+  font-family:var(--sans);font-size:1.02rem;font-weight:600;
+  background:linear-gradient(180deg,var(--gold-lit),var(--gold));
+  color:#2B1D03;
+  box-shadow:var(--shadow-gold);
+  transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 46px rgba(228,178,92,.4)}
+.btn:active{transform:translateY(0)}
+.btn[disabled]{filter:grayscale(.4) brightness(.92);cursor:wait}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.micro{font-size:.82rem;color:var(--on-dark-mut);margin:0;text-align:center}
+.tcf-error{color:#FF9E9E;font-size:.86rem;margin:0;display:none}
+
+/* light-section variants */
+.on-light .tcf-form input[type=email]{background:#fff;border-color:#D9CFBC;color:var(--on-light)}
+.on-light .tcf-form input[type=email]::placeholder{color:#877F70}
+.on-light .micro{color:var(--on-light-mut)}
+.on-light .tcf-error{color:#A32020}
+
+/* success state - swapped in by JS after signup */
+.tcf-success{display:none;border-radius:16px;padding:22px;text-align:left;
+  border:1px solid rgba(228,178,92,.45);background:rgba(228,178,92,.08);max-width:460px}
+.center .tcf-success{margin-left:auto;margin-right:auto}
+.tcf-success h3{color:var(--gold-lit);margin-bottom:.35em}
+.tcf-success p{font-size:.96rem;margin-bottom:.7em}
+.on-light .tcf-success{background:#fff;border-color:#E0D2B4}
+.on-light .tcf-success h3{color:var(--gold-deep)}
+.on-light .tcf-success p{color:var(--on-light-mut)}
+.is-done .tcf-form{display:none}
+.is-done .tcf-success{display:block}
+
+/* ==========================================================
+   4. HERO
+   ========================================================== */
+.hero{
+  position:relative;padding:clamp(34px,7vw,64px) 0 clamp(48px,9vw,88px);
+  background:
+    radial-gradient(90% 60% at 50% -8%, rgba(228,178,92,.20), transparent 62%),
+    radial-gradient(70% 50% at 88% 6%, rgba(120,160,255,.10), transparent 60%),
+    var(--ink);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;left:50%;bottom:-42%;transform:translateX(-50%);
+  width:120vw;height:60vh;pointer-events:none;
+  background:radial-gradient(closest-side, rgba(228,178,92,.12), transparent 70%);
+}
+.hero-grid{display:grid;gap:clamp(26px,5vw,54px);align-items:center;position:relative;z-index:1}
+.brandline{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-mut);margin:0 0 clamp(22px,5vw,40px)}
+.brandline b{color:var(--gold);font-weight:600}
+h1 .glow{color:var(--gold-lit)}
+.hero-sub{font-size:clamp(1.04rem,3vw,1.2rem);color:var(--on-dark-mut);max-width:48ch;margin-bottom:1.5em}
+.hero-trust{display:flex;flex-wrap:wrap;gap:4px 18px;margin:18px 0 0;padding:0;list-style:none;font-size:.83rem;color:var(--on-dark-mut)}
+.hero-trust li::before{content:"\2726";color:var(--gold);margin-right:7px}
+
+.cover-wrap{position:relative;display:flex;justify-content:center;padding:16px}
+/* Gold halo bleeding past the card edge, softening it into the dark ground */
+.cover-wrap::before{
+  content:"";position:absolute;inset:-8% -2%;
+  background:radial-gradient(closest-side, rgba(247,220,166,.30), rgba(228,178,92,.10) 58%, transparent 78%);
+  filter:blur(10px);
+}
+/* The cover mockup is a square image on its own cream ground, so it is
+   presented as a lit card rather than a floating cutout. aspect-ratio
+   crops the dead cream at the sides without touching the source file. */
+.cover{
+  position:relative;width:min(92%,330px);
+  aspect-ratio:4/5;object-fit:cover;object-position:center 52%;
+  border-radius:18px;
+  box-shadow:0 30px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(228,178,92,.28);
+}
+
+/* ==========================================================
+   5. PROBLEM / THE TURN
+   ========================================================== */
+.problem{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.05)}
+.feel{list-style:none;padding:0;margin:0 0 1.6em;max-width:640px}
+.feel li{
+  padding:16px 0 16px 26px;border-bottom:1px solid rgba(255,255,255,.07);
+  position:relative;font-size:clamp(1.02rem,2.8vw,1.14rem);color:#D3D9E7
+}
+.feel li::before{content:"";position:absolute;left:0;top:27px;width:11px;height:1px;background:var(--gold)}
+.quiet{color:var(--on-dark-mut);font-style:italic}
+
+.turn{background:radial-gradient(80% 50% at 50% 0%, rgba(228,178,92,.13), transparent 65%), var(--ink)}
+.pillars{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:32px}
+.pillar{
+  border:1px solid rgba(228,178,92,.24);border-radius:14px;padding:16px;
+  background:linear-gradient(180deg, rgba(228,178,92,.07), rgba(228,178,92,.02));
+}
+.pillar b{display:block;font-family:var(--serif);color:var(--gold-lit);font-size:1rem;letter-spacing:.06em;margin-bottom:3px}
+.pillar span{font-size:.88rem;color:var(--on-dark-mut)}
+
+/* ==========================================================
+   6. FREE GUIDE - the primary conversion block
+   ========================================================== */
+.offer{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);color:var(--on-light)}
+.offer h2,.offer h3{color:#101524}
+.offer .eyebrow{color:var(--gold-deep)}
+.offer .lede{color:var(--on-light-mut)}
+.offer-card{
+  background:#fff;border-radius:22px;padding:clamp(22px,4.5vw,44px);
+  box-shadow:0 24px 70px rgba(20,25,42,.14), 0 0 0 1px rgba(20,25,42,.05);
+  display:grid;gap:clamp(22px,4vw,44px);align-items:center;margin-top:34px;
+}
+.guide-visual{position:relative;display:flex;justify-content:center}
+.guide-visual::before{content:"";position:absolute;inset:-8%;background:radial-gradient(closest-side, rgba(228,178,92,.30), transparent 72%)}
+/* Pure-CSS guide mockup, styled as ivory and gold so the free PDF reads as
+   the same family as the book cover. Swap for a real mockup image when you
+   have one, keeping the .guide-mock wrapper for the halo behind it. */
+.guide-mock{
+  position:relative;width:min(66%,240px);aspect-ratio:3/4;border-radius:10px;
+  background:linear-gradient(165deg,#FDFBF6,#F2E9D8 68%,#E9DCC3);
+  box-shadow:0 20px 44px rgba(20,25,42,.20);
+  display:flex;flex-direction:column;justify-content:center;gap:9px;
+  padding:24px 18px;text-align:center;border:1px solid rgba(180,150,90,.38)
+}
+.guide-mock .halo{width:50px;height:50px;border-radius:50%;margin:0 auto 2px;
+  background:radial-gradient(circle,var(--gold-lit),rgba(228,178,92,.35) 60%,transparent 72%)}
+.guide-mock .t{font-family:var(--serif);color:#171B2A;font-size:1.1rem;line-height:1.2}
+.guide-mock .s{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+.guide-mock .d{font-size:.72rem;color:#6B6455}
+.stack{list-style:none;padding:0;margin:0 0 22px}
+.stack li{position:relative;padding:0 0 14px 32px;color:#2A3145;font-size:1rem}
+.stack li b{color:#101524}
+.stack li::before{
+  content:"\2713";position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;
+  background:var(--gold);color:#2B1D03;font-size:.72rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center
+}
+.value-note{font-size:.88rem;color:var(--on-light-mut);border-left:3px solid var(--gold);padding-left:12px;margin:0 0 22px}
+
+/* ==========================================================
+   7. BOOK / PROOF / AUTHOR / FAQ
+   ========================================================== */
+.book{background:var(--ink)}
+.out-grid{display:grid;gap:14px;margin:32px 0 30px}
+.out{border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:20px;background:var(--ink-2)}
+.out h3{color:var(--gold-lit);font-size:1.06rem;margin-bottom:.35em}
+.out p{margin:0;font-size:.95rem;color:var(--on-dark-mut)}
+.soft-cta{border:1px solid rgba(228,178,92,.3);border-radius:16px;padding:22px;background:rgba(228,178,92,.06)}
+.soft-cta p:last-child{margin-bottom:0}
+.price{font-family:var(--serif);color:var(--gold-lit)}
+.buylinks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.95rem;margin-top:4px}
+
+.proof{background:var(--ink-2);padding:clamp(40px,7vw,64px) 0}
+.scripture{text-align:center;font-family:var(--serif);font-size:clamp(1.1rem,3.4vw,1.4rem);color:var(--gold-lit);max-width:26ch;margin:0 auto .4em}
+.scripture-ref{text-align:center;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-mut);margin:0}
+
+.author{background:var(--ink)}
+.author-grid{display:grid;gap:24px;align-items:start}
+.photo{
+  width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto;
+  border:1px solid rgba(228,178,92,.45);box-shadow:0 0 44px rgba(228,178,92,.2);
+}
+.photo-ph{ /* placeholder until you drop in a real photo */
+  width:150px;height:150px;border-radius:50%;margin:0 auto;padding:16px;
+  border:1px dashed rgba(228,178,92,.5);background:linear-gradient(160deg,#16203A,#0C1226);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:.72rem;line-height:1.4;color:#8492AC
+}
+
+.faq{background:var(--ink-2)}
+details{border-bottom:1px solid rgba(255,255,255,.09)}
+summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;position:relative;font-family:var(--serif);font-size:1.05rem;color:#EDF0F7}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:15px;color:var(--gold);font-size:1.5rem;line-height:1;font-family:var(--sans)}
+details[open] summary::after{content:"\2013"}
+details p{color:var(--on-dark-mut);font-size:.96rem;padding-right:14px}
+
+/* ==========================================================
+   8. FINAL CTA / FOOTER / STICKY BAR / REMINDER MODAL
+   ========================================================== */
+.final{background:radial-gradient(70% 60% at 50% 100%, rgba(228,178,92,.20), transparent 70%), var(--ink);border-top:1px solid rgba(255,255,255,.06)}
+.final .wrap{padding-bottom:12px}
+footer{background:#050912;padding:34px 0 90px;font-size:.85rem;color:#7C879E;text-align:center}
+footer a{color:#A6B0C6;text-decoration:none;margin:0 9px;white-space:nowrap}
+footer a:hover{color:var(--gold);text-decoration:underline}
+.foot-links{margin:12px 0 0}
+
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(8,13,27,.94);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(228,178,92,.28);
+  transform:translateY(130%);transition:transform .28s ease;
+}
+.sticky.show{transform:translateY(0)}
+.sticky .btn{padding:14px;font-size:.98rem;text-align:center;text-decoration:none}
+
+.modal{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(4,7,15,.78);backdrop-filter:blur(4px)}
+.modal.show{display:flex}
+.modal-card{
+  position:relative;width:100%;max-width:430px;border-radius:20px;padding:30px 24px 26px;
+  background:linear-gradient(180deg,#131C33,#0A1020);
+  border:1px solid rgba(228,178,92,.35);box-shadow:0 30px 80px rgba(0,0,0,.6);text-align:center
+}
+.modal-card h3{color:var(--gold-lit)}
+.modal-card p{font-size:.96rem;color:var(--on-dark-mut)}
+.modal-close{position:absolute;top:6px;right:10px;background:none;border:0;color:#8894AC;font-size:1.7rem;line-height:1;cursor:pointer;padding:6px}
+
+/* ==========================================================
+   9. DESKTOP ENHANCEMENTS (mobile-first is the default above)
+   ========================================================== */
+@media (min-width:820px){
+  .hero-grid{grid-template-columns:1.08fr .92fr}
+  .cover{width:min(100%,360px)}
+  .offer-card{grid-template-columns:.8fr 1.2fr}
+  .out-grid{grid-template-columns:repeat(3,1fr)}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+  .author-grid{grid-template-columns:190px 1fr;gap:40px}
+  .photo,.photo-ph{margin:0}
+  .pillars{grid-template-columns:repeat(4,1fr)}
+  .sticky{display:none}                 /* sticky bar is a mobile-only device */
+  footer{padding-bottom:34px}
+  .tcf-form{flex-direction:row;flex-wrap:wrap;align-items:center;max-width:540px}
+  .tcf-form input[type=email]{flex:1 1 250px;width:auto}
+  .tcf-form .btn{width:auto;flex:0 0 auto}
+  .tcf-form .micro,.tcf-form .tcf-error{flex:1 0 100%;text-align:left}
+  .center .tcf-form .micro{text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ==========================================================
+     1. HERO - offer understood and actionable without scrolling
+     ========================================================== -->
+<header class="hero">
+  <div class="wrap">
+    <p class="brandline">The Christ Frequency <b>&nbsp;·&nbsp;</b> with Gideon George</p>
+
+    <div class="hero-grid">
+      <div>
+        <h1>The peace you keep praying for isn&rsquo;t far away. It&rsquo;s on <span class="glow">a different frequency</span>.</h1>
+
+        <p class="hero-sub">A free 7-day guide for anyone who still loves Christ but is tired of fear, noise and performance, and wants to feel Him again, quietly, in ordinary days.</p>
+
+        <!-- FORM 1 of 4 -->
+        <form class="tcf-form" novalidate>
+          <label class="sr" for="email-hero">Your email address</label>
+          <input id="email-hero" type="email" name="email_address" placeholder="Your best email address" autocomplete="email" required>
+          <button class="btn" type="submit">Send me the free guide</button>
+          <p class="tcf-error" role="alert"></p>
+          <p class="micro">Free. Instant. Unsubscribe anytime. No noise, ever.</p>
+        </form>
+
+        <ul class="hero-trust">
+          <li>7 short daily readings</li>
+          <li>No denomination required</li>
+          <li>Takes 6 minutes a day</li>
+        </ul>
+      </div>
+
+      <div class="cover-wrap">
+        <!-- Both files sit beside this page. Phones get the 55KB version,
+             larger screens the 136KB one. Replace both if the cover changes. -->
+        <img class="cover"
+             src="tcf-cover.jpg"
+             srcset="tcf-cover-small.jpg 760w, tcf-cover.jpg 1200w"
+             sizes="(min-width:820px) 330px, 92vw"
+             alt="The hardback edition of The Christ Frequency: Awakening Beyond Religion, Fear, and the Conditioned Mind by Gideon George, an ivory cover with a gold thread of light running through it"
+             width="1200" height="1200" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==========================================================
+     2. PROBLEM / AGITATION - empathy, never judgement
+     ========================================================== -->
+<section class="problem">
+  <div class="wrap narrow">
+    <p class="eyebrow">If you are honest about it</p>
+    <h2>You still believe. It just stopped feeling like anything.</h2>
+    <ul class="feel">
+      <li>You pray, and it sounds like words leaving a room: correct, familiar, and somehow unheard.</li>
+      <li>You know the verses about peace by heart, and still wake at 3am with your chest tight.</li>
+      <li>Some of what you were taught about God feels less like love and more like fear wearing love&rsquo;s clothes, and you were never allowed to say so out loud.</li>
+    </ul>
+    <p class="quiet">None of that means your faith is failing. It usually means something in you has outgrown the volume it was handed, and is listening for a deeper one.</p>
+  </div>
+</section>
+
+<!-- ==========================================================
+     3. THE TURN - the idea that changes everything
+     ========================================================== -->
+<section class="turn">
+  <div class="wrap narrow center">
+    <p class="eyebrow">The turn</p>
+    <h2>What if Christ is not only someone to believe in, but a way of being to awaken within?</h2>
+    <p class="lede">That is the Christ Frequency. Not a sound. Not a number of hertz. A steady orientation of the heart: love instead of fear, truth instead of pretence, presence instead of performance. Something you can actually tune back to on a normal Tuesday, in traffic, mid-argument, halfway through a hard week.</p>
+    <p class="lede">Nothing about your faith has to be thrown away. Something in it has to be met directly. It begins with four movements you will practise all week:</p>
+
+    <div class="pillars">
+      <div class="pillar"><b>PAUSE</b><span>Stop the reflex before it runs you.</span></div>
+      <div class="pillar"><b>OBSERVE</b><span>See the fear without obeying it.</span></div>
+      <div class="pillar"><b>ALIGN</b><span>Choose love as an actual decision.</span></div>
+      <div class="pillar"><b>EMBODY</b><span>Live it in one ordinary moment.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     4. FREE GUIDE - THE core conversion block
+     ========================================================== -->
+<section class="offer on-light" id="guide">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Your free gift</p>
+      <h2>The 7-Day Christ Frequency Starter Guide</h2>
+      <p class="lede">A short, beautiful PDF that walks you through one week of tuning. Six minutes a day, no theology exam, no guilt if you miss a morning.</p>
+    </div>
+
+    <div class="offer-card">
+      <div class="guide-visual">
+        <div class="guide-mock" role="img" aria-label="Cover of the free PDF: The 7-Day Christ Frequency Starter Guide">
+          <span class="halo" aria-hidden="true"></span>
+          <span class="s">Free PDF</span>
+          <span class="t">The 7-Day Christ&nbsp;Frequency Starter Guide</span>
+          <span class="d">Pause · Observe · Align · Embody</span>
+        </div>
+      </div>
+
+      <div>
+        <h3>What you&rsquo;ll discover inside</h3>
+        <ul class="stack">
+          <li><b>The 60-second Pause.</b> A way to interrupt anxiety mid-spiral that you can do with your eyes open, in public, without anyone noticing.</li>
+          <li><b>The fear audit.</b> Three questions that show you which beliefs you actually chose and which ones were simply installed before you were old enough to look at them.</li>
+          <li><b>Seven daily tunings.</b> One page per day, each with a single reflection and one small thing to embody before bed.</li>
+          <li><b>The alignment check.</b> A one-line practice for noticing, in real time, whether you are moving from love or from self-protection.</li>
+        </ul>
+
+        <p class="value-note">Drawn straight from the practices in the full book: the same PAUSE, OBSERVE, ALIGN, EMBODY framework readers say is the part they keep returning to. Yours free, because the first week should never be behind a payment.</p>
+
+        <!-- FORM 2 of 4 - the highest-priority form on the page -->
+        <form class="tcf-form" novalidate>
+          <label class="sr" for="email-guide">Your email address</label>
+          <input id="email-guide" type="email" name="email_address" placeholder="Your best email address" autocomplete="email" required>
+          <button class="btn" type="submit">Send me the free guide</button>
+          <p class="tcf-error" role="alert"></p>
+          <p class="micro">Free. Instant. Unsubscribe anytime. We will never share your email.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     5. WHAT'S INSIDE THE BOOK - outcomes, then a soft CTA
+     ========================================================== -->
+<section class="book">
+  <div class="wrap narrow">
+    <p class="eyebrow">And when the week is over</p>
+    <h2>The full journey: <em>The Christ Frequency</em></h2>
+    <p class="lede">Five parts. Eighteen chapters. One long, honest conversation about what happens when fear finally loosens its grip on your faith.</p>
+
+    <div class="out-grid">
+      <article class="out">
+        <h3>Fear stops sounding like God</h3>
+        <p>You learn to tell the difference between reverence and dread, and much of the weight you have been carrying as devotion turns out to be neither.</p>
+      </article>
+      <article class="out">
+        <h3>Questions stop feeling dangerous</h3>
+        <p>You can examine what you inherited without losing Christ in the process. Honest looking turns out to be a form of faith, not a betrayal of it.</p>
+      </article>
+      <article class="out">
+        <h3>Peace becomes something you practise</h3>
+        <p>Not a mood you wait for. A frequency you return to, on purpose, in the middle of ordinary life, with people who are difficult and days that go wrong.</p>
+      </article>
+    </div>
+
+    <div class="soft-cta">
+      <p><strong>When you&rsquo;re ready, not before.</strong> Start with the free guide. If the week opens something in you, the complete book is waiting: professionally formatted PDF and EPUB, delivered instantly.</p>
+      <p class="price">&#8358;9,990 in Nigeria &nbsp;·&nbsp; $9.99 internationally</p>
+      <!-- EDIT: paste your real checkout links -->
+      <p class="buylinks">
+        <a href="[SELAR CHECKOUT LINK]" rel="noopener">Nigeria &amp; Africa &rarr; Selar</a>
+        <a href="[PAYHIP CHECKOUT LINK]" rel="noopener">International &rarr; Payhip</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     6. SCRIPTURE BAND - a quiet beat between the book and the author
+     ========================================================== -->
+<section class="proof">
+  <div class="wrap">
+    <p class="scripture">&ldquo;Let this mind be in you, which was also in Christ Jesus.&rdquo;</p>
+    <p class="scripture-ref">Philippians 2:5 &nbsp;·&nbsp; King James Version</p>
+  </div>
+</section>
+
+<!-- ==========================================================
+     7. ABOUT THE AUTHOR
+     ========================================================== -->
+<section class="author">
+  <div class="wrap">
+    <div class="author-grid">
+      <div>
+        <!-- Replace this placeholder with: <img class="photo" src="gideon.jpg" alt="Gideon George"> -->
+        <div class="photo-ph">Warm author photo goes here (square, 600&times;600)</div>
+      </div>
+      <div>
+        <p class="eyebrow">Who wrote this</p>
+        <h2>Gideon George</h2>
+        <p>Gideon George is a Nigerian machine learning engineer, AI researcher and writer exploring consciousness, spiritual inquiry and inner transformation. He works with African languages and low-resource natural language processing by day, and spends the rest of his attention on the question of how inherited systems quietly shape what people believe about God and about themselves.</p>
+        <p><em>The Christ Frequency</em> came out of his own reckoning with fear that had been handed to him as faith. He did not want to write an attack on Christianity, and he did not want to build another doctrine to defend. He wanted a book he wishes someone had given him earlier: one that says you are allowed to look honestly, ask the hard question, and still walk toward Christ.</p>
+        <p>He is building <strong>The Christ Frequency with Gideon George</strong> as a home for books, reflections and practical resources for awakening beyond fear and the conditioned mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     8. FAQ - objection handling
+     ========================================================== -->
+<section class="faq">
+  <div class="wrap narrow">
+    <p class="eyebrow">Before you enter your email</p>
+    <h2>Honest answers</h2>
+
+    <details>
+      <summary>Is this for my denomination?</summary>
+      <p>Yes, and it does not ask you to leave it. This is inclusive spiritual reflection, not denominational theology. Catholics, Pentecostals, Anglicans, Baptists, people who have not been inside a church in years, and people who are not sure what they are anymore have all found their way in. Nothing here requires you to accept a new doctrine.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to be religious to get something from this?</summary>
+      <p>No. If you are drawn to Christ but weary of religious control, you are exactly who this was written for. If you are simply curious about consciousness, fear and inner transformation, the practices work without you signing anything.</p>
+    </details>
+
+    <details>
+      <summary>Does &ldquo;frequency&rdquo; mean an actual measurable hertz value?</summary>
+      <p>No, and I want to be clear about that. &ldquo;Frequency&rdquo; here is metaphor for a recurring orientation of consciousness: love rather than fear, truth rather than pretence, compassion rather than separation. It is not a scientific claim, and it is not a substitute for medical or psychological care.</p>
+    </details>
+
+    <details>
+      <summary>What exactly do I get, and when?</summary>
+      <p>The 7-Day Christ Frequency Starter Guide as a PDF, sent to your inbox within a minute or two of signing up. It reads well on a phone. After that you will hear from me occasionally with reflections. Never daily, never noise.</p>
+    </details>
+
+    <details>
+      <summary>Is my email safe?</summary>
+      <p>Yes. Your address is used to send you the guide and occasional reflections, nothing else. It is never sold, rented or shared. Every email has a one-click unsubscribe, and leaving costs you nothing. You keep the guide.</p>
+    </details>
+
+    <details>
+      <summary>Do I have to buy the book?</summary>
+      <p>No. The guide is complete in itself and free with no conditions attached. If the week opens something and you want to go further, the full book is there. If not, you are welcome to stay on the free side of the door for as long as you like.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ==========================================================
+     9. FINAL CTA
+     ========================================================== -->
+<section class="final">
+  <div class="wrap narrow center">
+    <p class="eyebrow">One small step</p>
+    <h2>Seven days from now, something could feel different.</h2>
+    <p class="lede">You have carried the tightness in your chest and the flatness in your prayers for a long time. One week of honest pausing will not undo a lifetime, but it is where every real change any of us has made actually started.</p>
+
+    <!-- FORM 3 of 4 -->
+    <form class="tcf-form" novalidate>
+      <label class="sr" for="email-final">Your email address</label>
+      <input id="email-final" type="email" name="email_address" placeholder="Your best email address" autocomplete="email" required>
+      <button class="btn" type="submit">Send me the free guide</button>
+      <p class="tcf-error" role="alert"></p>
+      <p class="micro">Free. Instant. Unsubscribe anytime. Day one lands in your inbox in about a minute.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==========================================================
+     10. FOOTER
+     ========================================================== -->
+<footer>
+  <div class="wrap">
+    <p>We will never spam you, sell your email, or hand it to anyone else. Unsubscribe in one click, anytime.</p>
+    <p class="foot-links">
+      <!-- EDIT: your real contact address and policy pages -->
+      <a href="mailto:[YOUR CONTACT EMAIL]">Contact</a>
+      <a href="[PRIVACY POLICY LINK]">Privacy</a>
+    </p>
+    <p style="margin:14px 0 0;font-size:.78rem;color:#5D687E">&copy; <span id="yr">2026</span> Gideon George &middot; The Christ Frequency</p>
+  </div>
+</footer>
+
+<!-- Sticky mobile CTA - appears once the hero scrolls away -->
+<div class="sticky" id="stickyBar">
+  <a class="btn" href="#guide">Send me the free guide &rarr;</a>
+</div>
+
+<!-- Exit-intent / deep-scroll reminder - shows at most once per visit -->
+<div class="modal" id="reminder" role="dialog" aria-modal="true" aria-labelledby="reminderTitle">
+  <div class="modal-card">
+    <button class="modal-close" id="reminderClose" aria-label="Close">&times;</button>
+    <h3 id="reminderTitle">Before you go, take the guide with you</h3>
+    <p>Seven days. Six minutes each. Free, and yours to keep whatever you decide about the book.</p>
+
+    <!-- FORM 4 of 4 -->
+    <form class="tcf-form" novalidate style="max-width:none">
+      <label class="sr" for="email-modal">Your email address</label>
+      <input id="email-modal" type="email" name="email_address" placeholder="Your best email address" autocomplete="email" required>
+      <button class="btn" type="submit">Send me the free guide</button>
+      <p class="tcf-error" role="alert"></p>
+      <p class="micro">Free. Instant. Unsubscribe anytime.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG - edit these four lines and the page is live
+   ============================================================ */
+
+/* ConvertKit (Kit): create your form, open Embed > find the form ID
+   in the URL (app.kit.com/forms/designers/XXXXXXX/edit), paste it here. */
+var CONVERTKIT_FORM_ID = "YOUR_FORM_ID";
+
+/* Where the thank-you state sends people who are ready to buy. */
+var BUY_LINK_NG   = "[SELAR CHECKOUT LINK]";     /* Nigeria & Africa: Naira 9,990 */
+var BUY_LINK_INTL = "[PAYHIP CHECKOUT LINK]";    /* International: $9.99           */
+
+/* ============================================================
+   FORM HANDLING - all four forms share this one handler
+   ============================================================ */
+var ENDPOINT = "https://app.kit.com/forms/" + CONVERTKIT_FORM_ID + "/subscriptions";
+
+var SUCCESS_HTML =
+  '<div class="tcf-success">' +
+    '<h3>Check your inbox. It is on its way.</h3>' +
+    '<p>Day One of the Starter Guide lands in about a minute. If it is not there, look in Promotions or Spam and drag it across so the rest of the week reaches you.</p>' +
+    '<p style="margin-bottom:0">Already know you want the whole journey? The full book is here: ' +
+      '<a class="link-buy" href="' + BUY_LINK_NG + '" rel="noopener">Nigeria &amp; Africa</a> &middot; ' +
+      '<a class="link-buy" href="' + BUY_LINK_INTL + '" rel="noopener">International</a>.' +
+    '</p>' +
+  '</div>';
+
+function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+
+/* Fires your analytics conversion event. Uncomment the lines you use. */
+function trackSignup(){
+  // if (window.gtag) gtag('event','generate_lead',{value:0,currency:'USD'});
+  // if (window.fbq)  fbq('track','Lead');
+}
+
+/* Marks every form on the page as complete, so a returning scroller
+   never sees an empty field asking for something they already gave. */
+function markAllDone(){
+  var forms = document.querySelectorAll(".tcf-form");
+  for (var i = 0; i < forms.length; i++){
+    var host = forms[i].parentNode;
+    if (host.querySelector(".tcf-success")) continue;
+    host.insertAdjacentHTML("beforeend", SUCCESS_HTML);
+    host.classList.add("is-done");
+  }
+  var bar = document.getElementById("stickyBar");
+  if (bar) bar.classList.remove("show");
+  closeReminder();
+  try { sessionStorage.setItem("tcf_subscribed","1"); } catch(e){}
+}
+
+function handleSubmit(e){
+  e.preventDefault();
+  var form  = e.currentTarget;
+  var input = form.querySelector("input[type=email]");
+  var btn   = form.querySelector("button");
+  var err   = form.querySelector(".tcf-error");
+  var email = (input.value || "").trim();
+
+  err.style.display = "none";
+
+  if (!isEmail(email)){
+    err.textContent = "That email does not look quite right. Mind checking it?";
+    err.style.display = "block";
+    input.focus();
+    return;
+  }
+
+  var original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Sending your guide…";
+
+  var body = new FormData();
+  body.append("email_address", email);
+
+  fetch(ENDPOINT, {
+    method: "POST",
+    body: body,
+    headers: { "Accept": "application/json" }
+  })
+  .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+  .then(function(){ trackSignup(); markAllDone(); })
+  .catch(function(){
+    /* Network or config failure - never leave the visitor stranded. */
+    btn.disabled = false;
+    btn.textContent = original;
+    err.textContent = "Something went wrong on our side. Please try once more.";
+    err.style.display = "block";
+  });
+}
+
+var allForms = document.querySelectorAll(".tcf-form");
+for (var f = 0; f < allForms.length; f++){
+  allForms[f].addEventListener("submit", handleSubmit);
+}
+
+/* Someone who already subscribed this session sees the thank-you, not a form. */
+try {
+  if (sessionStorage.getItem("tcf_subscribed") === "1") markAllDone();
+} catch(e){}
+
+/* ============================================================
+   STICKY MOBILE CTA - shows after the hero leaves the screen
+   ============================================================ */
+var stickyBar = document.getElementById("stickyBar");
+var heroEl    = document.querySelector(".hero");
+
+if (stickyBar && heroEl && "IntersectionObserver" in window){
+  new IntersectionObserver(function(entries){
+    var done = document.querySelector(".is-done");
+    stickyBar.classList.toggle("show", !entries[0].isIntersecting && !done);
+  }, { threshold: 0 }).observe(heroEl);
+}
+
+/* ============================================================
+   REMINDER - desktop exit-intent, mobile deep-scroll. Once per visit.
+   ============================================================ */
+var reminder = document.getElementById("reminder");
+var shown = false;
+
+function alreadySubscribed(){
+  try { return sessionStorage.getItem("tcf_subscribed") === "1"; } catch(e){ return false; }
+}
+function seenThisVisit(){
+  try { return sessionStorage.getItem("tcf_reminder") === "1"; } catch(e){ return false; }
+}
+function openReminder(){
+  if (shown || seenThisVisit() || alreadySubscribed()) return;
+  shown = true;
+  try { sessionStorage.setItem("tcf_reminder","1"); } catch(e){}
+  reminder.classList.add("show");
+  var field = document.getElementById("email-modal");
+  if (field) field.focus();
+}
+function closeReminder(){ if (reminder) reminder.classList.remove("show"); }
+
+document.getElementById("reminderClose").addEventListener("click", closeReminder);
+reminder.addEventListener("click", function(e){ if (e.target === reminder) closeReminder(); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeReminder(); });
+
+/* Desktop: cursor leaves the top of the window */
+document.addEventListener("mouseout", function(e){
+  if (!e.relatedTarget && e.clientY <= 0) openReminder();
+});
+
+/* Mobile: 65% of the way down, where intent is real but the ask is unmade */
+var ticking = false;
+window.addEventListener("scroll", function(){
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(function(){
+    ticking = false;
+    if (window.innerWidth >= 820) return;
+    var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (pct > 0.65) openReminder();
+  });
+}, { passive: true });
+
+/* Footer year */
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
