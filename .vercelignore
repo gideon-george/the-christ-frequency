@@ -33,3 +33,6 @@ Thumbs.db
 
 # Launch kit source (epub, revised manuscript, marketing copy) - local only
 launch-src/
+
+# Social-card source (og-card.jpg is the deployed artefact)
+og-card.src.html
