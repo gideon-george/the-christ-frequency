@@ -1,0 +1,28 @@
+# ==========================================================
+# Commercial book content - MUST NEVER reach a public host.
+# The Vercel CLI uploads the working directory, so this file
+# is the guard, not .gitignore.
+# ==========================================================
+*.docx
+*.pdf
+The_Christ_Frequency_Complete_Book.docx
+The_Christ_Frequency_Final_Master.docx
+The_Christ_Frequency_Direct_Sale.pdf
+The_Christ_Frequency_Print_Interior.pdf
+
+# Internal working docs
+The_Christ_Frequency_Editorial_Change_Log.md
+The_Christ_Frequency_Launch_Content.md
+The_Christ_Frequency_Sales_and_Metadata_Kit.md
+The_Christ_Frequency_Upload_Checklist.md
+TCF_Starter_Guide_Build_Prompt.md
+
+# Unreferenced full-size cover source (2 MB)
+TCF cover.png
+
+# Local tooling / repo cruft
+.claude/
+.git/
+README.md
+Thumbs.db
+.DS_Store
