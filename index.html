@@ -262,6 +262,10 @@ h1 .glow{color:var(--gold-lit)}
 .soft-cta p:last-child{margin-bottom:0}
 .price{font-family:var(--serif);color:var(--gold-lit)}
 .buylinks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.95rem;margin-top:4px}
+.link-buy{color:var(--gold-lit);text-decoration:underline;text-underline-offset:3px}
+.buy-now{font-size:.9rem;color:var(--on-dark-mut);margin:14px 0 0;text-align:left}
+.center .buy-now{text-align:center}
+.sticky-buy{display:block;margin-top:8px;text-align:center;font-size:.86rem;color:var(--on-dark-mut);text-decoration:underline;text-underline-offset:3px}
 
 .proof{background:var(--ink-2);padding:clamp(40px,7vw,64px) 0}
 .scripture{text-align:center;font-family:var(--serif);font-size:clamp(1.1rem,3.4vw,1.4rem);color:var(--gold-lit);max-width:26ch;margin:0 auto .4em}
@@ -369,6 +373,8 @@ footer a:hover{color:var(--gold);text-decoration:underline}
           <p class="micro">Free. Delivered by email. Unsubscribe anytime.</p>
         </form>
 
+        <p class="buy-now">Would rather not wait? Buy the book now: <a class="link-buy" href="https://selar.com/5c7uh7222v" rel="noopener">Nigeria &amp; Africa</a> &middot; <a class="link-buy" href="https://payhip.com/b/tLRwF" rel="noopener">International</a></p>
+
         <ul class="hero-trust">
           <li>7 short daily readings</li>
           <li>No denomination required</li>
@@ -473,7 +479,7 @@ footer a:hover{color:var(--gold);text-decoration:underline}
 <!-- ==========================================================
      5. WHAT'S INSIDE THE BOOK - outcomes, then a soft CTA
      ========================================================== -->
-<section class="book">
+<section class="book" id="book">
   <div class="wrap narrow">
     <p class="eyebrow">And when the week is over</p>
     <h2>The full journey: <em>The Christ Frequency</em></h2>
@@ -594,6 +600,8 @@ footer a:hover{color:var(--gold);text-decoration:underline}
       <p class="tcf-error" role="alert"></p>
       <p class="micro">Free. Instant. Unsubscribe anytime. Day one lands in your inbox in about a minute.</p>
     </form>
+
+    <p class="buy-now">Ready for the book itself? <a class="link-buy" href="https://selar.com/5c7uh7222v" rel="noopener">Nigeria &amp; Africa</a> &middot; <a class="link-buy" href="https://payhip.com/b/tLRwF" rel="noopener">International</a></p>
   </div>
 </section>
 
@@ -614,6 +622,7 @@ footer a:hover{color:var(--gold);text-decoration:underline}
 <!-- Sticky mobile CTA - appears once the hero scrolls away -->
 <div class="sticky" id="stickyBar">
   <a class="btn" href="#guide">Send me the free guide &rarr;</a>
+  <a class="sticky-buy" href="#book">Or buy the book now</a>
 </div>
 
 <!-- Exit-intent / deep-scroll reminder - shows at most once per visit -->
