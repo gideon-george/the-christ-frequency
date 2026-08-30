@@ -1,7 +1,13 @@
 # The Christ Frequency - https://www.thechristfrequency.live/
-# Everything published here is meant to be found.
+# The pages here are meant to be found. The starter guide is not.
 
 User-agent: *
 Allow: /
+
+# The guide has to sit at a public URL so Kit's delivery email can link
+# straight at it, but it is precisely what the signup form trades for.
+# Left indexable, a search for its title would hand it to people who never
+# subscribed, and the whole funnel routes around the email capture.
+Disallow: /The_7Day_Christ_Frequency_Starter_Guide.pdf
 
 Sitemap: https://www.thechristfrequency.live/sitemap.xml
