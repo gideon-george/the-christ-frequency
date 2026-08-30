@@ -19,3 +19,6 @@ Thumbs.db
 
 # Internal build prompt
 TCF_Starter_Guide_Build_Prompt.md
+
+# Launch kit source (book files, marketing copy, mockups) - local only
+launch-src/
