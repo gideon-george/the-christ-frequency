@@ -1,0 +1,80 @@
+<!-- Source for og-card.jpg, the 1200x630 social share image.
+     Not deployed - see .vercelignore. To rebuild after a headline or cover change,
+     open this file in a browser at exactly 1200x630 and export, or run headless:
+
+       chromium --headless --force-device-scale-factor=1 --hide-scrollbars \
+         --virtual-time-budget=9000 --window-size=1300,760 \
+         --screenshot=card.png file://$PWD/og-card.src.html
+
+     then crop the result to the top-left 1200x630 and save as og-card.jpg.
+     Colours and type here are copied from index.html - keep them in step. -->
+<!doctype html>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#080D1B; --gold:#E4B25C; --gold-lit:#F7DCA6;
+  --on-dark:#EDF0F7; --on-dark-mut:#A6B0C6;
+  --serif:Fraunces,Georgia,serif; --sans:Inter,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+.card{
+  position:relative;width:1200px;height:630px;overflow:hidden;
+  background:
+    radial-gradient(90% 70% at 34% -14%, rgba(228,178,92,.22), transparent 62%),
+    radial-gradient(60% 60% at 92% 10%, rgba(120,160,255,.11), transparent 60%),
+    var(--ink);
+  display:grid;grid-template-columns:1fr 372px;align-items:center;
+  gap:56px;padding:62px 68px;
+  font-family:var(--sans);color:var(--on-dark);
+}
+/* the same soft gold pool the hero sits in */
+.card::after{
+  content:"";position:absolute;left:34%;bottom:-46%;transform:translateX(-50%);
+  width:1100px;height:520px;pointer-events:none;
+  background:radial-gradient(closest-side, rgba(228,178,92,.13), transparent 70%);
+}
+.col{position:relative;z-index:1}
+.brandline{
+  font-size:15px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--on-dark-mut);margin:0 0 30px;
+}
+.brandline b{color:var(--gold);font-weight:600}
+h1{
+  font-family:var(--serif);font-weight:600;font-size:56px;line-height:1.1;
+  letter-spacing:-.015em;margin:0 0 24px;
+}
+h1 .glow{color:var(--gold-lit)}
+.sub{font-size:21px;line-height:1.5;color:var(--on-dark-mut);margin:0 0 32px;max-width:34ch}
+.pill{
+  display:inline-block;font-size:15px;font-weight:600;letter-spacing:.02em;
+  color:#2A1D05;background:linear-gradient(180deg,var(--gold-lit),var(--gold));
+  padding:12px 22px;border-radius:999px;
+}
+.cover-wrap{position:relative;display:flex;justify-content:center;z-index:1}
+.cover-wrap::before{
+  content:"";position:absolute;inset:-9% -3%;
+  background:radial-gradient(closest-side, rgba(247,220,166,.30), rgba(228,178,92,.10) 58%, transparent 78%);
+  filter:blur(10px);
+}
+.cover{
+  position:relative;width:330px;height:412px;
+  object-fit:cover;object-position:center 52%;
+  border-radius:18px;
+  box-shadow:0 30px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(228,178,92,.28);
+}
+</style>
+<div class="card">
+  <div class="col">
+    <p class="brandline">The Christ Frequency <b>&nbsp;·&nbsp;</b> with Gideon George</p>
+    <h1>The peace you keep praying for isn&rsquo;t far away. It&rsquo;s on <span class="glow">a different frequency</span>.</h1>
+    <p class="sub">For everyone who still believes but has not felt that nearness in a long time.</p>
+    <span class="pill">Free 7-day starter guide</span>
+  </div>
+  <div class="cover-wrap">
+    <img class="cover" src="tcf-cover.jpg" alt="">
+  </div>
+</div>
