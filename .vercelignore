@@ -5,6 +5,10 @@
 # ==========================================================
 *.docx
 *.pdf
+
+# ...except the free starter guide, which is the lead magnet and MUST
+# be publicly downloadable. Kit's email 0 links straight at it.
+!The_7Day_Christ_Frequency_Starter_Guide.pdf
 The_Christ_Frequency_Complete_Book.docx
 The_Christ_Frequency_Final_Master.docx
 The_Christ_Frequency_Direct_Sale.pdf
