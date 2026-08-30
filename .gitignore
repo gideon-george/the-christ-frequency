@@ -16,3 +16,6 @@ TCF cover.png
 # OS / editor cruft
 Thumbs.db
 .DS_Store
+
+# Internal build prompt
+TCF_Starter_Guide_Build_Prompt.md
