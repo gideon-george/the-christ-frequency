@@ -57,6 +57,71 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#080D1B">
 
+<!-- Structured data: what the book is, who wrote it, and what it costs where. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.thechristfrequency.live/#website",
+      "url": "https://www.thechristfrequency.live/",
+      "name": "The Christ Frequency",
+      "description": "The home of The Christ Frequency by Gideon George, and the free 7-day starter guide.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.thechristfrequency.live/#gideon"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.thechristfrequency.live/#gideon",
+      "name": "Gideon George",
+      "jobTitle": "Machine learning engineer, AI researcher and writer",
+      "description": "Nigerian machine learning engineer, AI researcher and writer exploring consciousness, spiritual inquiry and inner transformation. He works with African languages and low-resource natural language processing, and writes about how inherited systems shape what people believe about God and about themselves.",
+      "url": "https://www.thechristfrequency.live/",
+      "knowsAbout": [
+        "Spiritual inquiry",
+        "Consciousness",
+        "Natural language processing",
+        "African languages"
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.thechristfrequency.live/#book",
+      "name": "The Christ Frequency: Awakening Beyond Religion, Fear, and the Conditioned Mind",
+      "author": {
+        "@id": "https://www.thechristfrequency.live/#gideon"
+      },
+      "inLanguage": "en",
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://www.thechristfrequency.live/tcf-cover.jpg",
+      "url": "https://www.thechristfrequency.live/",
+      "description": "Five parts and eighteen chapters on what happens when fear loosens its grip on faith: telling reverence from dread, examining what you inherited without losing Christ, and practising peace through PAUSE, OBSERVE, ALIGN, EMBODY.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Nigeria & Africa",
+          "url": "https://selar.com/5c7uh7222v",
+          "price": "9963",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "International",
+          "url": "https://payhip.com/b/tLRwF",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
