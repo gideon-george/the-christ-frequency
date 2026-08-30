@@ -1,0 +1,7 @@
+# The Christ Frequency - https://www.thechristfrequency.live/
+# Everything published here is meant to be found.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.thechristfrequency.live/sitemap.xml
