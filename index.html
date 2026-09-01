@@ -349,7 +349,16 @@ h1 .glow{color:var(--gold-lit)}
 .soft-cta{border:1px solid rgba(228,178,92,.3);border-radius:16px;padding:22px;background:rgba(228,178,92,.06)}
 .soft-cta p:last-child{margin-bottom:0}
 .price{font-family:var(--serif);color:var(--gold-lit)}
-.buylinks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.95rem;margin-top:4px}
+.buylinks{display:flex;flex-wrap:wrap;gap:12px;font-size:.95rem;margin-top:16px}
+.buylinks a{
+  display:inline-block;padding:14px 22px;border-radius:11px;
+  font-weight:600;text-decoration:none;
+  background:linear-gradient(180deg,var(--gold-lit),var(--gold));
+  color:#2B1D03;box-shadow:var(--shadow-gold);
+  transition:transform .15s ease,filter .15s ease;
+}
+.buylinks a:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.buylinks a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .link-buy{color:var(--gold-lit);text-decoration:underline;text-underline-offset:3px}
 .buy-now{font-size:.9rem;color:var(--on-dark-mut);margin:14px 0 0;text-align:left}
 .center .buy-now{text-align:center}
@@ -561,11 +570,11 @@ footer a:hover{color:var(--gold);text-decoration:underline}
 </section>
 
 <!-- ==========================================================
-     5. WHAT'S INSIDE THE BOOK - outcomes, then a soft CTA
+     5. WHAT'S INSIDE THE BOOK - outcomes, then buy it now
      ========================================================== -->
 <section class="book" id="book">
   <div class="wrap narrow">
-    <p class="eyebrow">And when the week is over</p>
+    <p class="eyebrow">Available now</p>
     <h2>The full journey: <em>The Christ Frequency</em></h2>
     <p class="lede">Five parts. Eighteen chapters. One long, honest conversation about what happens when fear finally loosens its grip on your faith.</p>
 
@@ -585,9 +594,8 @@ footer a:hover{color:var(--gold);text-decoration:underline}
     </div>
 
     <div class="soft-cta">
-      <p><strong>When you&rsquo;re ready, not before.</strong> Start with the free guide. If the week opens something in you, the complete book is waiting: professionally formatted PDF and EPUB, delivered instantly.</p>
+      <p><strong>Yours the moment you buy.</strong> Professionally formatted PDF and EPUB, delivered instantly. The free guide is an alternative, not a step on the way &mdash; start wherever you like.</p>
       <p class="price">&#8358;9,963 in Nigeria &nbsp;·&nbsp; $9.63 internationally</p>
-      <!-- EDIT: paste your real checkout links -->
       <p class="buylinks">
         <a href="https://selar.com/th51jb6uby" rel="noopener">Nigeria &amp; Africa &rarr; Selar</a>
         <a href="https://payhip.com/b/tLRwF" rel="noopener">International &rarr; Payhip</a>
