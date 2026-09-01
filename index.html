@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8V626G577"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T8V626G577');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Christ Frequency: Free 7-Day Starter Guide</title>
@@ -30,14 +39,8 @@
      Uncomment a block and drop in your ID to switch it on.
      ==========================================================
 
-     GOOGLE ANALYTICS 4
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-       gtag('config', 'G-XXXXXXXXXX');
-     </script>
+     GOOGLE ANALYTICS 4 is already live - the real gtag.js snippet
+     (G-T8V626G577) sits at the top of this head. Do not add a second one.
 
      META (FACEBOOK) PIXEL
      <script>
@@ -772,9 +775,9 @@ var SUCCESS_HTML =
 
 function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
 
-/* Fires your analytics conversion event. Uncomment the lines you use. */
+/* Fires the analytics conversion event on a successful signup. */
 function trackSignup(){
-  // if (window.gtag) gtag('event','generate_lead',{value:0,currency:'USD'});
+  if (window.gtag) gtag('event','generate_lead',{value:0,currency:'USD'});
   // if (window.fbq)  fbq('track','Lead');
 }
 
