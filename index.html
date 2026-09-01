@@ -224,6 +224,16 @@ section{padding:clamp(56px,10vw,104px) 0}
 .on-light .tcf-success{background:#fff;border-color:#E0D2B4}
 .on-light .tcf-success h3{color:var(--gold-deep)}
 .on-light .tcf-success p{color:var(--on-light-mut)}
+/* the guide itself, offered straight away rather than only by email */
+.dl-btn{
+  display:inline-block;margin:.2em 0 1em;padding:13px 20px;border-radius:11px;
+  font-weight:600;font-size:.98rem;text-decoration:none;
+  background:linear-gradient(180deg,var(--gold-lit),var(--gold));
+  color:#2B1D03;box-shadow:var(--shadow-gold);
+  transition:transform .15s ease,filter .15s ease;
+}
+.dl-btn:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.dl-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .is-done .tcf-form{display:none}
 .is-done .tcf-success{display:block}
 
@@ -731,6 +741,10 @@ footer a:hover{color:var(--gold);text-decoration:underline}
 var CONVERTKIT_FORM_ID = "9861477";
 
 /* Where the thank-you state sends people who are ready to buy. */
+/* The guide itself. Served from this site, so a new subscriber can have it
+   before the delivery email arrives. robots.txt keeps it out of search. */
+var GUIDE_URL = "/The_7Day_Christ_Frequency_Starter_Guide.pdf";
+
 var BUY_LINK_NG   = "https://selar.com/th51jb6uby";     /* Nigeria & Africa: Naira 9,963 */
 var BUY_LINK_INTL = "https://payhip.com/b/tLRwF";    /* International: $9.63           */
 
@@ -741,8 +755,9 @@ var ENDPOINT = "https://app.kit.com/forms/" + CONVERTKIT_FORM_ID + "/subscriptio
 
 var SUCCESS_HTML =
   '<div class="tcf-success">' +
-    '<h3>Check your inbox. It is on its way.</h3>' +
-    '<p>Day One of the Starter Guide lands in about a minute. If it is not there, look in Promotions or Spam and drag it across so the rest of the week reaches you.</p>' +
+    '<h3>You are in. Here is the guide.</h3>' +
+    '<a class="dl-btn" href="' + GUIDE_URL + '" target="_blank" rel="noopener">Download the 7-Day Starter Guide</a>' +
+    '<p>A copy is on its way to your inbox too, so you have it wherever you read. If it has not arrived in a minute, look in Promotions or Spam and drag it across so the rest of the week reaches you.</p>' +
     '<p style="margin-bottom:0">Already know you want the whole journey? The full book is here: ' +
       '<a class="link-buy" href="' + BUY_LINK_NG + '" rel="noopener">Nigeria &amp; Africa</a> &middot; ' +
       '<a class="link-buy" href="' + BUY_LINK_INTL + '" rel="noopener">International</a>.' +
@@ -764,7 +779,9 @@ function markAllDone(){
   for (var i = 0; i < forms.length; i++){
     var host = forms[i].parentNode;
     if (host.querySelector(".tcf-success")) continue;
-    host.insertAdjacentHTML("beforeend", SUCCESS_HTML);
+    /* sits where the form sat. Appending to the host instead would drop it
+       below whatever follows - in the hero, under the trust list. */
+    forms[i].insertAdjacentHTML("afterend", SUCCESS_HTML);
     host.classList.add("is-done");
   }
   var bar = document.getElementById("stickyBar");
