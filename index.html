@@ -365,12 +365,6 @@ h1 .glow{color:var(--gold-lit)}
   width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto;
   border:1px solid rgba(228,178,92,.45);box-shadow:0 0 44px rgba(228,178,92,.2);
 }
-.photo-ph{ /* placeholder until you drop in a real photo */
-  width:150px;height:150px;border-radius:50%;margin:0 auto;padding:16px;
-  border:1px dashed rgba(228,178,92,.5);background:linear-gradient(160deg,#16203A,#0C1226);
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  font-size:.72rem;line-height:1.4;color:#8492AC
-}
 
 .faq{background:var(--ink-2)}
 details{border-bottom:1px solid rgba(255,255,255,.09)}
@@ -420,8 +414,10 @@ footer a:hover{color:var(--gold);text-decoration:underline}
   .offer-card{grid-template-columns:.8fr 1.2fr}
   .out-grid{grid-template-columns:repeat(3,1fr)}
   .quotes{grid-template-columns:repeat(3,1fr)}
-  .author-grid{grid-template-columns:190px 1fr;gap:40px}
-  .photo,.photo-ph{margin:0}
+  /* Two columns only when there is a photo to fill the first one. Drop the
+     img back in and the portrait layout returns on its own. */
+  .author-grid:has(.photo){grid-template-columns:190px 1fr;gap:40px}
+  .photo{margin:0}
   .pillars{grid-template-columns:repeat(4,1fr)}
   .sticky{display:none}                 /* sticky bar is a mobile-only device */
   footer{padding-bottom:34px}
@@ -623,10 +619,13 @@ footer a:hover{color:var(--gold);text-decoration:underline}
 <section class="author">
   <div class="wrap">
     <div class="author-grid">
-      <div>
-        <!-- Replace this placeholder with: <img class="photo" src="gideon.jpg" alt="Gideon George"> -->
-        <div class="photo-ph">Warm author photo goes here (square, 600&times;600)</div>
-      </div>
+      <!-- Author photo goes here when there is one. Restoring it is this block
+           alone - the .photo style and the two-column rule are both still in
+           place and key off the image itself:
+
+           <div><img class="photo" src="gideon.jpg" width="600" height="600"
+                     alt="Gideon George"></div>
+      -->
       <div>
         <p class="eyebrow">Who wrote this</p>
         <h2>Gideon George</h2>
