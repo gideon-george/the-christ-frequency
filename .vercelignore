@@ -21,6 +21,16 @@ The_Christ_Frequency_Sales_and_Metadata_Kit.md
 The_Christ_Frequency_Upload_Checklist.md
 TCF_Starter_Guide_Build_Prompt.md
 
+# Backup copies and packaged bundles of the book. The *.pdf / *.docx globs
+# above already catch most of these, but the merchant zip is neither.
+*_BACKUP.*
+TCF_Merchant_Upload_Pack.zip
+*.epub
+
+# Working art that is not referenced by the live site
+cover-options/
+email-assets/
+
 # Unreferenced full-size cover source (2 MB)
 TCF cover.png
 

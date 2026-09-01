@@ -22,3 +22,14 @@ TCF_Starter_Guide_Build_Prompt.md
 
 # Launch kit source (book files, marketing copy, mockups) - local only
 launch-src/
+
+# Backup copies and packaged bundles of the commercial book.
+# The repo is PUBLIC - these patterns are what stop a stray `git add -A`
+# from publishing the paid book, so keep them broad.
+*_BACKUP.*
+TCF_Merchant_Upload_Pack.zip
+*.epub
+
+# Working art that is not referenced by the live site
+cover-options/
+email-assets/
